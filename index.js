@@ -133,6 +133,9 @@ const limiter = rateLimit({
   windowMs: REQUEST_TIME,
   max: REQUEST_NUMBER,
 });
+
+app.set("trust proxy", 1);
+
 app.use(limiter);
 
 // Disable unnecessary ETag if WEB_CACHE=false
