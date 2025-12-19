@@ -48,7 +48,7 @@ const allowedOrigins = [
   "https://tazirun-frontend-git-main-md-atikur-rahmans-projects.vercel.app",
   "https://tazirun-frontend-fyavbtgxt-md-atikur-rahmans-projects.vercel.app",
   "http://localhost:5173",
-  "https://tazirun.netlify.app/",
+  "https://tazirun.netlify.app",
 ];
 
 app.use(
