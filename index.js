@@ -155,6 +155,9 @@ mongoose
     console.log("MongoDB connected!");
 
     // Call index builder (clean separation)
+    app.listen(PORT, () => {
+      console.log(`Server started on port ${PORT}`);
+    });
     await createDBIndexes(mongoose.connection.db);
   })
   .catch((err) => {
@@ -175,6 +178,3 @@ app.use("*", (req, res) => {
 // ---------------------------------------------
 // Server Start
 // ---------------------------------------------
-app.listen(PORT, () => {
-  console.log(`Server started on port ${PORT}`);
-});
