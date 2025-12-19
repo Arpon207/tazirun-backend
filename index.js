@@ -31,6 +31,8 @@ const app = express();
 // Improve security & tiny performance boost
 app.disable("x-powered-by");
 
+app.set("trust proxy", 1);
+
 // Get __dirname for ES modules
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -133,8 +135,6 @@ const limiter = rateLimit({
   windowMs: REQUEST_TIME,
   max: REQUEST_NUMBER,
 });
-
-app.set("trust proxy", 1);
 
 app.use(limiter);
 
